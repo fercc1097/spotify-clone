@@ -12,17 +12,19 @@ mixin benefit(imagen,titulo,descripcion)
         p.benefits__description=descripcion
 
 mixin plan(nombre,descripcion,beneficios)
-    .plans 
-        p.plans__badge 1 mes gratis
-        h3.plans__title=nombre
-        p.plans__description Después de la prueba, solo #{descripcion[0]} USD al mes
-        p.plans__no-cuentas=descripcion[1]
-        .plans__separator
-        ul.plans__include
-            each beneficio in beneficios
-                li.plans__element
-                    img(src="/", alt="check icon")
-                    p.plans__benefit=beneficio
-        a.plans__cta-link(href="/") Comenzar
-        a.plans__footer-link(href="/") Aplican términos y condiciones.
-        p.plans__footer-text El mes gratis no está disponible para los usuarios que ya hayan probado Premium.
+    .plans
+        .plans__header 
+            p.plans__badge 1 mes gratis
+            h3.plans__title=nombre
+            p.plans__description Después de la prueba, solo #{descripcion[0]} USD al mes
+            p.plans__no-cuentas=descripcion[1]
+            .plans__separator
+        .plans__content
+            ul.plans__include
+                each beneficio in beneficios
+                    li.plans__element
+                        img(src="../../src/img/check.png", alt="check icon", class="plans__binieta")
+                        p.plans__benefit=beneficio
+        .plans__footer
+            a.plans__cta-link(href="/") Comenzar
+            p.plans__footer-text #[a.plans__footer-link(href="/") Aplican términos y condiciones.] El mes gratis no está disponible para los usuarios que ya hayan probado Premium.
