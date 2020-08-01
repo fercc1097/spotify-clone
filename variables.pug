@@ -1,0 +1,28 @@
+-var beneficiosPlanUno = ["Escucha música sin anuncios","Reproduce tus canciones en cualquier lugar, incluso sin conexión","Reproducción on-demand"]
+-var beneficiosPlanDos = ["2 cuentas Premium para parejas que viven juntas","Duo Mix: una playlist para dos, actualizada periódicamente con la música que más les gusta","Reproducción de música sin anuncios, sin conexión y on-demand"]
+-var beneficiosPlanTres = ["6 cuentas Premium para familias que viven juntas","Family Mix: una playlist para tu familia, actualizada periódicamente con la música que más les gusta","Bloquea la música explícita","Reproducción de música sin anuncios, sin conexión y on-demand"]
+-var descripcionPlanUno = ["5.99","1 cuenta"]
+-var descripcionPlanDos = ["7.99","2 cuentas"]
+-var descripcionPlanTres = ["8.99","Hasta 6 cuentas"]
+
+mixin benefit(imagen,titulo,descripcion)
+    div.benefits
+        img.benefits__img(src="src/img/"+imagen, alt="beneficio de ser premium")
+        h3.benefits__title=titulo
+        p.benefits__description=descripcion
+
+mixin plan(nombre,descripcion,beneficios)
+    .plans 
+        p.plans__badge 1 mes gratis
+        h3.plans__title=nombre
+        p.plans__description Después de la prueba, solo #{descripcion[0]} USD al mes
+        p.plans__no-cuentas=descripcion[1]
+        .plans__separator
+        ul.plans__include
+            each beneficio in beneficios
+                li.plans__element
+                    img(src="/", alt="check icon")
+                    p.plans__benefit=beneficio
+        a.plans__cta-link(href="/") Comenzar
+        a.plans__footer-link(href="/") Aplican términos y condiciones.
+        p.plans__footer-text El mes gratis no está disponible para los usuarios que ya hayan probado Premium.
