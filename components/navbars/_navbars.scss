@@ -1,0 +1,37 @@
+header{
+    width: 86%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 7%;
+    z-index: 3;
+}
+.header__logo{
+    padding-top: 20px;
+    height: 41px;
+    width: 132px;
+}
+.navigation{
+    width: 561px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    &__link{
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 28px 17px;
+        &:hover{
+            color: black;
+        }
+    }
+    &__separator{
+        margin:0 1px;
+        width: 1px;
+        height: 16px;
+        background-color: white;
+
+    }
+}
