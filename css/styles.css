@@ -354,6 +354,8 @@ header {
   margin: 6px 0;
 }
 .plans__binieta {
+  height: 24px;
+  width: 24px;
   display: inline;
   padding: 0 10px 0 0;
 }
