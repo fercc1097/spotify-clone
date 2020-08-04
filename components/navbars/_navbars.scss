@@ -15,6 +15,9 @@ header{
         height: initial;
         background-color: transparent;
     }
+    @include media(desktop-m){
+        left: 7%;
+    }
 }
 .header__logo{
     padding: 0;

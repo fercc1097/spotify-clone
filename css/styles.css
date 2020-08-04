@@ -73,6 +73,11 @@ header {
     background-color: transparent;
   }
 }
+@media only screen and (min-width: 1200px) {
+  header {
+    left: 7%;
+  }
+}
 
 .header__logo {
   padding: 0;
@@ -137,13 +142,16 @@ header {
   }
 }
 .hero__text-container {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .hero__text-container {
-    max-width: 1140px;
+    margin-top: initial;
+    max-width: 720px;
+    height: 500px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -151,14 +159,29 @@ header {
     max-width: 940px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .hero__text-container {
+    max-width: 1140px;
+  }
+}
 .hero__title {
-  font-size: 80px;
-  word-spacing: -10px;
+  font-size: 48px;
   margin: 0;
 }
+@media only screen and (min-width: 992px) {
+  .hero__title {
+    font-size: 80px;
+    word-spacing: -10px;
+  }
+}
 .hero__subtitle {
-  font-size: 30px;
-  word-spacing: -2px;
+  font-size: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .hero__subtitle {
+    word-spacing: -2px;
+    font-size: 30px;
+  }
 }
 .hero__cta-button {
   width: -webkit-fit-content;

@@ -16,28 +16,36 @@
         padding-top: 50px;
     }
     &__text-container{
+        margin-top: 60px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        @include media(desktop-m){
-            max-width: 1140px;
+        @include media(tablet){
+            margin-top: initial;
+            max-width: 720px;
+            height: 500px;
         }
         @include media(desktop-s){
             max-width: 940px;
         }
-        @include media(tablet-p){
-            max-width: 720px;
-            height: 500px;
+        @include media(desktop-m){
+            max-width: 1140px;
         }
     }
     &__title{
-        font-size: 80px;
-        word-spacing: -10px;
+        font-size: 48px;
+        @include media(desktop-s){
+            font-size: 80px;
+            word-spacing: -10px;
+        }
         margin: 0;
     }
     &__subtitle{
-        font-size: 30px;
-        word-spacing: -2px;
+        font-size: 24px;
+        @include media(tablet){
+            word-spacing: -2px;
+            font-size: 30px;
+        }
     }
     &__cta-button{
         @extend %link-cta;
