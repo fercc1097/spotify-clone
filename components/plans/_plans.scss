@@ -5,13 +5,20 @@
     justify-content: center;
 }
 .plans-container{
-    display: flex;
+    display: block;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    max-width: 1140px;
+    max-width: 400px;
     margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media(desktop-m){
+        display: flex;
+        max-width: 1400px;
+    }
 }
 .plans{
-    margin: 0 8px;
+    margin: 10px 8px;
     flex: 1;
     padding: 16px;
     background-color: white;
@@ -60,6 +67,9 @@
     &__element{
         display: flex;
         align-items: center;
+    }
+    &__benefit{
+        margin: 6px 0;
     }
     &__binieta{
         display: inline;

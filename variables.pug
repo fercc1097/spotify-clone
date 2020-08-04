@@ -8,8 +8,9 @@
 mixin benefit(imagen,titulo,descripcion)
     div.benefits
         img.benefits__img(src="src/img/"+imagen, alt="beneficio de ser premium")
-        h3.benefits__title=titulo
-        p.benefits__description=descripcion
+        .text
+            h3.benefits__title=titulo
+            p.benefits__description=descripcion
 
 mixin plan(nombre,descripcion,beneficios)
     .plans

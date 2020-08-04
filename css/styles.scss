@@ -1,4 +1,5 @@
 @import "variables";
+@import "../utils/breakpoints";
 body{
     margin:0;
     padding: 0;
@@ -13,3 +14,4 @@ body{
 @import "../components/heroes/heroes";
 @import "../components/benefits/benefits";
 @import "../components/plans/plans";
+@import "../components/footers/footers"

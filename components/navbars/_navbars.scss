@@ -1,21 +1,36 @@
 header{
-    width: 86%;
     margin: 0 auto;
+    width: 100vw;
+    height: 54px;
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    align-items: center;
+    position: fixed;
     top: 0;
-    left: 7%;
+    left: 0;
     z-index: 3;
+    background-color: black;
+    @include media(tablet){
+        width: 86%;
+        height: initial;
+        background-color: transparent;
+    }
 }
 .header__logo{
-    padding-top: 20px;
-    height: 41px;
-    width: 132px;
+    padding: 0;
+    height: 29px;
+    width: 89px;
+    @include media(tablet){
+        height: 41px;
+        width: 132px;
+        padding-top: 20px;
+
+    }
 }
 .navigation{
-    width: 561px;
-    display: flex;
+    align-self: center;
+    width: 50px;
+    display: none;
     justify-content: space-evenly;
     list-style: none;
     &__link{
@@ -33,5 +48,9 @@ header{
         height: 16px;
         background-color: white;
 
+    }
+    @include media(tablet){
+        display: flex;
+        width: 561px;
     }
 }
